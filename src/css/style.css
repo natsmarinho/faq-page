@@ -9,7 +9,7 @@ body {
 
 .container {
     background-color: #fff;
-    position:relative;
+    position: relative;
     left: 50%;
     transform: translate(-50%);
     top: 9rem;
@@ -19,18 +19,16 @@ body {
     width: 85%;
     height: 60%;
     border-radius: 1.4375rem;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.50);
 }
 
 .container-image {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: -7rem;
 }
-
-.shadow {
-    position: relative;
-    top: -5rem;
-}
-
 
 .shadow {
     position: relative;
@@ -71,4 +69,43 @@ body {
 
 .faq-items::after{
     content: url('../images/arrow-bottom.svg');
+}
+
+@media screen and (min-width: 762px) {
+    .faq-items {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        flex-direction: row;
+        width: 80%;
+        height: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-image {
+        top: 3rem;
+        left: -10rem;
+    }
+
+    .img{
+        width: 200%;
+    }
+
+    .shadow {
+        top: -8rem;
+        width: 150%;
+    }
+
+    .faq {
+        top: 0;
+        text-align: start;
+    }
+
+    .faq-title {
+        padding-left: 1rem;
+    }
 }
