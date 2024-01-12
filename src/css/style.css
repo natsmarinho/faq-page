@@ -4,7 +4,7 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%) no-repeat;
-    height: 100vh;
+    height: 114vh;
 }
 
 .container {
@@ -75,21 +75,35 @@ body {
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.125rem;
-    padding-bottom: 1rem;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.answer.active {
+    max-height: 300px;
+    text-align: start;
+}
+
+svg.active {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform .5s ease-in;
 }
 
 @media screen and (min-width: 1200px) {
     .container {
         flex-direction: row-reverse;
         width: 60%;
-        top: 3rem;
         padding-top: 4rem;
-        padding-bottom: 5rem;
     }
 
     .container-image {
-        top: 7rem;
+        top: 5rem;
         left: 9.4rem;
     }
 
@@ -98,7 +112,7 @@ body {
     }
 
     .shadow {
-        top: -10rem;
+        top: -11rem;
         width: 90%;
         left: 0;
     }
