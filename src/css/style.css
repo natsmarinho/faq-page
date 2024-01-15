@@ -77,9 +77,19 @@ body {
     line-height: 1.125rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1.5s ease;
+    transition: max-height .5s ease-in-out;
     text-align: start;
     margin-bottom: 1rem;
+}
+
+.faq-items:hover {
+    color: #F47B56;
+}
+
+.bold {
+    font-weight: 700;
+    color: #1E1F36;
+    transition: font-weight .5s ease;
 }
 
 .answer.active {
@@ -92,7 +102,7 @@ svg.active {
 }
 
 svg {
-    transition: transform .5s ease-in;
+    transition: transform .8s ease-in;
 }
 
 @media screen and (min-width: 1200px) {
